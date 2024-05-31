@@ -1,6 +1,6 @@
 const btnAnterior = document.getElementById("btnAnterior");
-const btSiguiente = document.getElementById("btnSiguiente");
-const btnContenedor = document.getElementById("btnContenedor");
+const btnSiguiente = document.getElementById("btnSiguiente");
+const contenedor = document.getElementById("contenedor");
 
 let pagina = 1;
 
@@ -34,17 +34,17 @@ const cargarPeliculas = async()=>{
 
         datos.results.forEach(pelicula => {
             peliculas += `
-            <div class="movies">
-                <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="" />
-                <div class="movie-titulo">
-                    <h3>${movie.name}</h3>
-                    
+            <div class="card pelicula" >
+                <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title titulos">${pelicula.title} </h5>
+                    <p class="card-text descripcion">${pelicula.overview} </p>
                 </div>
             </div>
             `;            
         });
 
-        btnContenedor.innerHTML = peliculas;
+        contenedor.innerHTML = peliculas;
 
     }
 
@@ -58,4 +58,3 @@ const cargarPeliculas = async()=>{
 }
 
 cargarPeliculas();
-
