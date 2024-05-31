@@ -20,21 +20,21 @@
             <form action="" method="get">
                 <h2 class="tituloRegistro">Registro</h2>
                 <div>
-                    <input type="text" placeholder="Nombre" id="nombre" name="nombre">
+                    <input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
                     <div class="error-text"></div>
                 </div>
                 <div>
-                    <input type="text" placeholder="Apellido" id="apellido" name="apellido">
+                    <input type="text" placeholder="Apellido" id="apellido" name="apellido" required>
                 </div>
                 <div>
-                    <input type="email" placeholder="Email" id="email" name="email">                   
+                    <input type="email" placeholder="Email" id="email" name="email" required>                   
                 </div>
                 <div>
-                    <input type="password" placeholder="Contraseña" id="password" name="password">                
+                    <input type="password" placeholder="Contraseña" id="password" name="password" required>                
                 </div>
                 <div>
                     <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" id="fechaNacimiento"
-                        name="fechaNacimiento">                 
+                        name="fechaNacimiento" required>                 
                 </div>
                 <div>
                     <select name="pais" id="pais">
@@ -52,11 +52,11 @@
                     </select>
                 </div>
                 <div class="terminos">
-                    <input class="check" type="checkbox" id="terminos">
+                    <input class="check" type="checkbox" id="terminos" required>
                     <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
                 </div>
                 <div>
-                    <input class="boton" type="submit" value="Registrarse">
+                    <input class="boton" type="submit" value="Registrarse" required>
                 </div>
                 <div>
                     <a class="ayuda" href="#">Necesitas ayuda?</a>
@@ -68,6 +68,8 @@
     <script>
         AOS.init();
     </script>
+
+    <script src="../js/validaRegistro.js"></script>
 
 </body>
 

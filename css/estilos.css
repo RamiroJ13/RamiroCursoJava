@@ -366,6 +366,111 @@ hr {
     margin-top: 40px;
 }
 
+/*---------------cargar API---------------------------*/
+.section-trends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    .movies-container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+
+        .movies {
+            width: 12.5rem;
+            height: 18.75rem;
+            position: relative;
+            border-radius: 10px;
+            box-sizing: border-box;
+
+            .movie {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                overflow: hidden;
+                transition: all 0.5s ease;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    position: absolute;
+                }
+
+                .movie-titulo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                }
+
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    transition: opacity 0.9s ease-in-out;
+                    opacity: 0;
+                    z-index: 10;
+                    padding: 0 1rem;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 30px #9f3648cd;
+                    transform: scale(0.9);
+                }
+
+                &:hover .movie-titulo {
+                    backdrop-filter: blur(20px);
+                }
+
+                &:hover h3 {
+                    opacity: 1;
+                }
+
+                &:hover img {}
+            }
+        }
+    }
+}
+
+.btn-anterior,
+.btn-siguiente {
+    background-color: #9f3647;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #fff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-left: 20px;
+
+    &:hover {
+        transform: scale(0.95);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+    }
+}
+
+
 
 /*-------------------registro-------------------------*/
 
@@ -431,7 +536,8 @@ hr {
                 outline: none;
                 color: rgb(255, 255, 255);
             }
-/*
+
+            /*
             .error input:not(.check, .boton),
             .error select {
                 border: 1px solid #ff0000;
