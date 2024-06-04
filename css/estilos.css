@@ -374,7 +374,6 @@ hr {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     -ms-grid-columns: repeat(2, 1fr);
-
     gap: 30px;
 }
 .titulo-pelis {
@@ -438,11 +437,13 @@ hr {
 .descripcion {
     text-align: left;
 }
-
-
-
-
-
+.card-img-top{
+    height: 300px;
+}
+.descripcion{
+    overflow-y: auto;
+    max-height: 100px;
+}
 /*-------------------registro-------------------------*/
 
 .bodyRegistro {
